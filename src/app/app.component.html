@@ -5,6 +5,7 @@
 <div class="search-form">
 	Search: <input #searchTerm type="text" (keyup.enter)="search(searchTerm.value);" name="searchTerm"/>
 	<button (click)="search(searchTerm.value);">Search</button>
+	<button *ngIf="searchTerm.value" id="clearFields" (click)="search(''); searchTerm.value = ''">Clear Search Result & Search Field</button>
 </div>
 
 <orbit-counts [satellites]="displayList"></orbit-counts>
