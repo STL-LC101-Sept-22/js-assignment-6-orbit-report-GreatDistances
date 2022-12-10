@@ -15,9 +15,12 @@ export class Satellite {
    }
 	
 	isSpaceDebris(): boolean {
-		return true;
-   }
-
+		if (this.type === "Space Debris") {
+			return true;
+		} else {
+			return false;
+		}
+	}
 }
 
-// TODO 3a: fix isSpaceDebris check
+// TODO 3a: fix isSpaceDebris check - MPW DONE 2022/12/09, 12:49 PM
